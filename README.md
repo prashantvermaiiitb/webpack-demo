@@ -14,4 +14,11 @@
    2. Style Loader - Inject CSS into the DOM. (https://webpack.js.org/loaders/style-loader/)
    3. npm install --save-dev style-loader css-loader
    
-7. 
+7. Using resource/asset to load the images and Fonts, for this there is no package to be loaded.
+
+8. Loading Data like JSON files by default will work but CSVs , TSVs and XML file have to use appropriate loaders for each of these files like csv-loader, tsv-loader and xml-loader.
+   > npm install --save-dev csv-loader xml-loader 
+
+9.  Then add some data files to the project like data.json, data.csv, data.tsv, data.xml
+
+10. 

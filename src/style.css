@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Pixer";
+  src: url("./Pixer-Regular.woff") format("woff"),
+    url("./Pixer-Regular.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
 .hello {
-    color: red;
-  }
+  color: red;
+  font-family: "Pixer";
+  background: url("./my-icon.png");
+}
