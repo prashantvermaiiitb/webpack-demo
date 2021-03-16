@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import './style.css';
 /**
  * There are problems with managing JavaScript projects this way:
  * It is not immediately apparent that the script depends on an external library.
@@ -13,7 +14,7 @@ function component() {
   
     // Lodash, currently included via a script, is required for this line to work
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
+    element.classList.add('hello');
     return element;
   }
   
