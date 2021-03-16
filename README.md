@@ -21,4 +21,9 @@
 
 9.  Then add some data files to the project like data.json, data.csv, data.tsv, data.xml
 
-10. 
+10. Customize parser of JSON modules : https://webpack.js.org/guides/asset-management/
+
+11. It's possible to import any toml, yaml or json5 files as a JSON module by using a custom parser instead of a specific webpack loader.
+    > npm install toml yamljs json5 --save-dev
+    
+12. 

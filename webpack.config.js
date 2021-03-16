@@ -1,4 +1,12 @@
 const path = require('path');
+
+// https://webpack.js.org/guides/asset-management/
+// Custom parser for the different JSON formats
+const toml = require('toml');
+const yaml = require('yamljs');
+const json5 = require('json5');
+
+
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -32,7 +40,29 @@ module.exports = {
             {
                 test: /\.xml$/i,
                 use: ['xml-loader'],
-            }
+            },
+            //Custom JSON parser
+            {
+                test: /\.toml$/i,
+                type: 'json',
+                parser: {
+                  parse: toml.parse,
+                },
+              },
+              {
+                test: /\.yaml$/i,
+                type: 'json',
+                parser: {
+                  parse: yaml.parse,
+                },
+              },
+              {
+                test: /\.json5$/i,
+                type: 'json',
+                parser: {
+                  parse: json5.parse,
+                },
+              },
         ]
     }
 }

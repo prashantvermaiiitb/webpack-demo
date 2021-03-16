@@ -3,6 +3,11 @@ import './style.css';
 import Icon from './my-icon.png';
 import CsvData from './data.csv';
 import XmlData from './data.xml';
+import JsonData from './data.json';
+
+import toml from './data.toml';
+import yaml from './data.yaml';
+import json from './data.json5';
 
 /**
  * There are problems with managing JavaScript projects this way:
@@ -12,6 +17,15 @@ import XmlData from './data.xml';
  * Let's use webpack to manage these scripts instead.
 **/
 
+
+console.log(toml.title); // output `TOML Example`
+console.log(toml.owner.name); // output `Tom Preston-Werner`
+
+console.log(yaml.title); // output `YAML Example`
+console.log(yaml.owner.name); // output `Tom Preston-Werner`
+
+console.log(json.title); // output `JSON5 Example`
+console.log(json.owner.name); // output `Tom Preston-Werner`
 
 function component() {
     const element = document.createElement('div');
@@ -27,7 +41,15 @@ function component() {
     element.appendChild(myIcon);
 
     console.log('Xml Data', XmlData);
+
+    let xmlDiv = document.createElement('div');
+    xmlDiv.innerHTML = JSON.stringify(XmlData);
+    xmlDiv.style.border = '3px solid red';
+    xmlDiv.style.background = 'none';
+    element.appendChild(xmlDiv);
+
     console.log('Csv Data', CsvData);
+    console.log('JSON data', JsonData);
 
     return element;
 }
