@@ -7,3 +7,4 @@
 
 4. NPX : The npx command, which ships with Node 8.2/npm 5.2.0 or higher, runs the webpack binary (./node_modules/.bin/webpack) of the webpack package.
 
+5. Adding NPM script in the webpack.config.js and then using "npm run build".
