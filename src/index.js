@@ -1,3 +1,4 @@
+import _ from 'lodash';
 /**
  * There are problems with managing JavaScript projects this way:
  * It is not immediately apparent that the script depends on an external library.
