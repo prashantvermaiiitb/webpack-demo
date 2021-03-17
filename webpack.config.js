@@ -7,10 +7,14 @@ module.exports = {
         print: './src/print.js',
     },
     devtool: 'inline-source-map',
+    devServer: { //for the webpack-dev-server
+        contentBase: './dist'
+    },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        publicPath: '/',
     },
     // https://webpack.js.org/guides/asset-management/
     module: {

@@ -25,4 +25,8 @@ As you might have noticed over the past guides and code example, our /dist folde
 
 10. mode: 'development' will produce the JS bundle with unmiified code and source-maps will help in the debugging of the code.
     
-11. 
+11. Below are the options available to handle manual change 
+    1. webpack's Watch Mode
+    2. webpack-dev-server
+    3. webpack-dev-middleware
+
