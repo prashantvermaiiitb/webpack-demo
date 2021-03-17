@@ -22,3 +22,7 @@
 
  9. Cleaning up the /dist folder : https://webpack.js.org/guides/output-management/
 As you might have noticed over the past guides and code example, our /dist folder has become quite cluttered. Webpack will generate the files and put them in the /dist folder for you, but it doesn't keep track of which files are actually in use by your project.
+
+10. mode: 'development' will produce the JS bundle with unmiified code and source-maps will help in the debugging of the code.
+    
+11. 
