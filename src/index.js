@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import './style.css';
+import printMe from './print.js';
 /**
  * There are problems with managing JavaScript projects this way:
  * It is not immediately apparent that the script depends on an external library.
@@ -10,12 +11,20 @@ import './style.css';
 
 
 function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-    return element;
-  }
-  
-  document.body.appendChild(component());
+  const element = document.createElement('div');
+
+  const btn = document.createElement('button');
+
+  // Lodash, currently included via a script, is required for this line to work
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.classList.add('hello');
+
+  btn.innerHTML = 'Click me and check the console!';
+  btn.onclick = printMe;
+
+  element.appendChild(btn);
+
+  return element;
+}
+
+document.body.appendChild(component());

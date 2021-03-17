@@ -14,4 +14,11 @@
    2. Style Loader - Inject CSS into the DOM. (https://webpack.js.org/loaders/style-loader/)
    3. npm install --save-dev style-loader css-loader
    
-7. 
+7. Output management Module https://webpack.js.org/guides/output-management/
+8. HTML Webpack plugin : The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. You can either let the plugin generate an HTML file for you, supply your own template using lodash templates, or use your own loader.
+
+ https://webpack.js.org/plugins/html-webpack-plugin/
+ By default "htmlwebpack" plugin will generate HTML file and place it in the /dist folder
+
+ 9. Cleaning up the /dist folder : https://webpack.js.org/guides/output-management/
+As you might have noticed over the past guides and code example, our /dist folder has become quite cluttered. Webpack will generate the files and put them in the /dist folder for you, but it doesn't keep track of which files are actually in use by your project.
