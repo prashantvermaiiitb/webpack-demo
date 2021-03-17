@@ -22,3 +22,5 @@
 
  9. Cleaning up the /dist folder : https://webpack.js.org/guides/output-management/
 As you might have noticed over the past guides and code example, our /dist folder has become quite cluttered. Webpack will generate the files and put them in the /dist folder for you, but it doesn't keep track of which files are actually in use by your project.
+
+10. Code Splitting : is being used for creating smaller bundles and on demand loading of the chunks using dynamic imports. Prevent duplication of the chunks. 
