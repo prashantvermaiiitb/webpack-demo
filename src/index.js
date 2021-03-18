@@ -14,7 +14,8 @@ async function getComponent() {
 
   const loadClickHandler = async function () {
     console.log('click handler loaded');
-    const clickHandler = await (await import('./clickhandler')).default;
+    //this will put the prefetch in the DOM from the client end
+    const clickHandler = await (await import(/* webpackPrefetch: true */ './clickhandler')).default;
     clickHandler.print.call(1, 2, 3, 4, 5);
   };
 
