@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
-    mode: 'development',
+    mode: 'development', //not being used then check name for shared.bundle.js
     //Approach #1
     //should go for the single entry point where feasible
     //!even if we have 2 entry in JSON then also we are going to have 1
@@ -65,6 +65,14 @@ module.exports = {
         splitChunks: {
             chunks: 'all',
         },
-    }, 
-    plugins: [new HtmlWebpackPlugin({ title: 'Output Management' }), new MiniCssExtractPlugin()]
+    },
+    plugins: [new HtmlWebpackPlugin({ title: 'Output Management' }), new MiniCssExtractPlugin({
+        insert: function (linkTag) {
+            var reference = document.querySelector('#styleDiv');
+            console.log('printing reference...', reference);
+            if (reference) {
+                reference.parentNode.insertBefore(linkTag, reference);
+            }
+        },
+    })]
 }

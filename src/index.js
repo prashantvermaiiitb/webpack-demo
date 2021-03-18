@@ -24,6 +24,10 @@ function component() {
 
   element.appendChild(btn);
 
+  const styleDiv = document.createElement('div');
+  styleDiv.setAttribute('id', 'styleDiv');
+  element.appendChild(styleDiv);
+
   return element;
 }
 
