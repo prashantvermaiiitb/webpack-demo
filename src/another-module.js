@@ -1,10 +1,10 @@
 import _ from 'lodash';
 
-export default {
+const hello = {
     print: () => {
         return (_.join(['Another', 'module', 'loaded!'], ' '));
     }
 }
 
-// export default hello;
+export default hello;
 
