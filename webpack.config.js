@@ -1,21 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    entry: {
-        index: {
-            import: './src/index.js',
-            dependOn: 'shared'
-        },
-        print: {
-            import: './src/print.js',
-            dependOn: 'shared'
-        },
-        another: {
-            import: './src/another-module.js',
-            dependOn: 'shared'
-        },
-        shared: 'lodash'
-    },
+    entry : './src/index.js', // will create bundle with name main.bundle.js
+    // entry: {
+    //     index: './src/index.js' // will create bundle with name -> index.bundle.js
+    // },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -30,14 +19,6 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             }
         ]
-    },
-    // optimization: {
-    //     runtimeChunk: 'single',
-    // },
-    optimization: {
-        splitChunks: {
-            chunks: 'all',
-        },
     },
     plugins: [new HtmlWebpackPlugin({ title: 'Output Management' })]
 }

@@ -1,3 +1,10 @@
 import _ from 'lodash';
 
-console.log(_.join(['Another', 'module', 'loaded!'], ' '));
+export default {
+    print: () => {
+        return (_.join(['Another', 'module', 'loaded!'], ' '));
+    }
+}
+
+// export default hello;
+
