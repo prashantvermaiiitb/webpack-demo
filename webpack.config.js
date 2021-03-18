@@ -37,7 +37,7 @@ module.exports = {
         // shared: 'lodash'
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[hash:6].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
@@ -66,13 +66,9 @@ module.exports = {
             chunks: 'all',
         },
     },
-    plugins: [new HtmlWebpackPlugin({ title: 'Output Management' }), new MiniCssExtractPlugin({
-        insert: function (linkTag) {
-            var reference = document.querySelector('#styleDiv');
-            console.log('printing reference...', reference);
-            if (reference) {
-                reference.parentNode.insertBefore(linkTag, reference);
-            }
-        },
-    })]
+    plugins: [new HtmlWebpackPlugin({ title: 'Output Management' }),
+    new MiniCssExtractPlugin({
+        insert: '#styleDiv'
+    }),
+    ]
 }
