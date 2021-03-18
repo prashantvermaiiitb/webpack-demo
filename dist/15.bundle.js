@@ -1,0 +1,1 @@
+(self.webpackChunkwebpack_demo=self.webpackChunkwebpack_demo||[]).push([[15],{15:(e,s,t)=>{"use strict";t.r(s),t.d(s,{default:()=>a});const a={print:function(...e){alert("this should be preloader",e)}}}}]);

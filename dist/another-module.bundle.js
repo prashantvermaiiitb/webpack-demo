@@ -1,0 +1,1 @@
+(self.webpackChunkwebpack_demo=self.webpackChunkwebpack_demo||[]).push([[679],{405:(e,o,a)=>{"use strict";a.r(o),a.d(o,{default:()=>n});var d=a(486),l=a.n(d);const n={print:()=>(console.log("this should be pre-loaded alongwith parent!!"),l().join(["Another","module","loaded!"]," "))}}}]);
